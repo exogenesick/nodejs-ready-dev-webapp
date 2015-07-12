@@ -10,7 +10,7 @@ config
   .argv()
   .env();
 
-var environment = config.get('NODE_ENV') || 'dev';
+var environment = config.get('NODE_ENV') || 'development';
 
 var configFile = util.format(__dirname + '/../config/%s.json', environment);
 

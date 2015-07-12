@@ -1,8 +1,12 @@
 var express = require('express');
-var indexController = require('./../controllers/index');
 var router = express.Router();
+var config = require('nconf');
+var homepageController = require('./../controllers/homepage');
 
-router.get('/', indexController.index);
-router.get('/:name', indexController.index);
+module.exports = function(app) {
+    // homepage
+    router.get('/', homepageController.index);
+    router.get('/:name', homepageController.index);
 
-module.exports = router;
+    app.use('/', router);
+};

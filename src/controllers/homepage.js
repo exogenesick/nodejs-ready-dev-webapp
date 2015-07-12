@@ -1,6 +1,6 @@
-var indexController = {};
+var IndexController = {};
 
-indexController.index = function(req, res, next) {
+IndexController.index = function(req, res, next) {
     var name = req.params.name;
 
     if (!name) {
@@ -10,4 +10,4 @@ indexController.index = function(req, res, next) {
     res.render('index', { name: name });
 };
 
-module.exports = indexController;
+module.exports = IndexController;
